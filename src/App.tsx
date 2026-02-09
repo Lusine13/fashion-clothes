@@ -1,8 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./components/layout/MainLayout";
+import HomePage from "./pages/Home/HomePage";
+import ProductsPage from "./pages/Products/ProductsPage";
+import CartPage from "./pages/Cart/CartPage";
+
 const App = () => {
   return (
-    <div>
-      <h1>Fashion Clothes</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
