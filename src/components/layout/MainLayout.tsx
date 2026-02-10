@@ -1,13 +1,11 @@
 import { Outlet } from "react-router-dom";
+import Header from "./Header";
 
 const MainLayout = () => {
   return (
     <div>
-      <header>
-        <h2>Fashion Clothes</h2>
-      </header>
-
-      <main>
+      <Header />
+      <main style={{ padding: "16px" }}>
         <Outlet />
       </main>
     </div>
