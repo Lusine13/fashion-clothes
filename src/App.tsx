@@ -7,6 +7,8 @@ import { auth } from "./config/firebase";
 import { setUser } from "./store/slices/authSlice";
 
 import MainLayout from "./components/layout/MainLayout";
+import LoginPage from "./pages/Auth/LoginPage";
+import RegisterPage from "./pages/Auth/RegisterPage";
 import HomePage from "./pages/Home/HomePage";
 import ProductsPage from "./pages/Products/ProductsPage";
 import CartPage from "./pages/Cart/CartPage";
@@ -35,6 +37,8 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/cart" element={<CartPage />} />
